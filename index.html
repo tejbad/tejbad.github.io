@@ -71,6 +71,21 @@
       justify-content: flex-end;
     }
 
+    /* Highlight bold keywords like resume */
+    strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .download {
+      background: linear-gradient(180deg, rgba(56,189,248,.25), rgba(56,189,248,.15));
+      border-color: var(--accent);
+    }
+
+    .download:hover {
+      background: linear-gradient(180deg, rgba(56,189,248,.35), rgba(56,189,248,.25));
+    }
+
     .btn {
       padding: 10px 14px;
       border-radius: 10px;
@@ -197,6 +212,7 @@
         <div class="meta">Pune, India</div>
       </div>
       <div class="links">
+        <a class="btn download" href="Resume_Tejas_Badgujar_SDE.pdf" download>Download Resume</a>
         <a class="btn" href="mailto:tejasabad@gmail.com">Email</a>
         <a class="btn" href="https://www.linkedin.com/in/tejas-badgujar-5b0952188/" target="_blank">LinkedIn</a>
         <a class="btn" href="https://github.com/tejbad" target="_blank">GitHub</a>
@@ -231,14 +247,35 @@
     <section>
       <h2>Projects</h2>
       <div class="project">
-        <div class="project-title">Payments HUB — Barclays</div>
+        <div class="project-title"><strong>Payments HUB</strong> — <strong>Barclays</strong></div>
         <ul>
-          <li>Improved bulk payment processing performance by ~15% through workflow optimization.</li>
-          <li>Developed modular payment services using Java, Spring Boot, Kafka, and MQ.</li>
-          <li>Exposed REST APIs to synchronize payment lifecycle status across multiple systems.</li>
-          <li>Implemented CI/CD pipelines with Jenkins to automate builds and deployments.</li>
+          <li><strong>Optimized</strong> bulk payment workflows, improving processing performance by <strong>~15%</strong>.</li>
+          <li>Designed and built <strong>modular payment microservices</strong> using <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>Kafka</strong>, and MQ.</li>
+          <li>Created <strong>REST APIs</strong> to synchronize <strong>payment lifecycle status</strong> across multiple banking systems.</li>
+          <li>Implemented <strong>CI/CD pipelines</strong> using <strong>Jenkins</strong> for automated build, test, and deployment.</li>
         </ul>
       </div>
+    </section>
+
+    <section>
+      <h2>System Design Highlights</h2>
+      <ul>
+        <li><strong>Event-driven architecture</strong> using Kafka for asynchronous payment processing.</li>
+        <li><strong>Idempotent APIs</strong> to safely handle retries and duplicate payment requests.</li>
+        <li><strong>Transactional consistency</strong> across microservices using reliable messaging patterns.</li>
+        <li><strong>Fault-tolerant design</strong> with retries, dead-letter queues, and graceful error handling.</li>
+        <li><strong>Secure APIs</strong> using Spring Security and JWT-based authentication.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Production Impact</h2>
+      <ul>
+        <li><strong>Reduced payment failures</strong> by resolving critical production issues in high-volume systems.</li>
+        <li>Improved <strong>system reliability and uptime</strong> for enterprise banking applications.</li>
+        <li>Enhanced <strong>API response times</strong> through query optimization and efficient service design.</li>
+        <li>Supported <strong>high-throughput transactions</strong> with low latency using Kafka-based workflows.</li>
+      </ul>
     </section>
 
     <section>
