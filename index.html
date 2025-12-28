@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejas Badgujar | Backend Software Engineer</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8; /* cyan */
+      --accent-2: #22c55e; /* green */
+      --border: #1f2937;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, #0b2a3a 0%, transparent 60%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 48px 20px 64px;
+    }
+
+    /* ===== Header / Hero ===== */
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 36px;
+      padding: 28px 32px;
+      background: linear-gradient(180deg, rgba(56,189,248,.12), rgba(34,197,94,.06));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+      margin: 0 0 6px 0;
+      letter-spacing: .2px;
+    }
+
+    .role {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(255,255,255,.02);
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+      background: rgba(56,189,248,.08);
+    }
+
+    /* ===== Sections ===== */
+    section {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 30px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    section h2 {
+      margin: 0 0 16px 0;
+      font-size: 1.25rem;
+      letter-spacing: .3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56,189,248,.15);
+    }
+
+    p { color: #d1d5db; }
+
+    ul { padding-left: 18px; }
+    li { margin-bottom: 8px; }
+
+    /* ===== Experience ===== */
+    .company {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .company h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .company span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* ===== Projects ===== */
+    .project {
+      border-left: 2px solid var(--accent);
+      padding-left: 16px;
+    }
+
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #eaf7ff;
+    }
+
+    /* ===== Skills ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .skill-box {
+      background: rgba(255,255,255,.03);
+      border: 1px dashed var(--border);
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: .95rem;
+    }
+
+    .skill-box strong { color: var(--accent-2); }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+      margin-top: 32px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 720px) {
+      header {
+        grid-template-columns: 1fr;
+      }
+      .links { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div>
+        <h1>Tejas Badgujar</h1>
+        <div class="role">Backend Software Engineer</div>
+        <div class="meta">Java • Spring Boot • Microservices • Payments • Kafka</div>
+        <div class="meta">Pune, India</div>
+      </div>
+      <div class="links">
+        <a class="btn" href="mailto:tejasabad@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/tejas-badgujar-5b0952188/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/tejbad" target="_blank">GitHub</a>
+        <a class="btn" href="https://leetcode.com/Tejbad/" target="_blank">LeetCode</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        Backend-focused engineer with 3+ years of experience building scalable, enterprise-grade systems in the
+        banking domain. Specialized in Java, Spring Boot, and microservices with deep exposure to payment
+        processing, Kafka-based messaging, and high-reliability REST APIs.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="company">
+        <h3>Accenture — Software Engineer Analyst</h3>
+        <span>Sept 2022 – Present · Pune</span>
+      </div>
+      <ul>
+        <li>Designed and maintained scalable microservices for core banking and payment platforms.</li>
+        <li>Built and optimized REST APIs using Java and Spring Boot.</li>
+        <li>Implemented real-time event-driven workflows using Kafka and messaging queues.</li>
+        <li>Improved transaction reliability, throughput, and data consistency across services.</li>
+        <li>Resolved high-impact production issues causing payment failures.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project">
+        <div class="project-title">Payments HUB — Barclays</div>
+        <ul>
+          <li>Improved bulk payment processing performance by ~15% through workflow optimization.</li>
+          <li>Developed modular payment services using Java, Spring Boot, Kafka, and MQ.</li>
+          <li>Exposed REST APIs to synchronize payment lifecycle status across multiple systems.</li>
+          <li>Implemented CI/CD pipelines with Jenkins to automate builds and deployments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-box"><strong>Languages</strong><br/>Java, Python, JavaScript, TypeScript, C++</div>
+        <div class="skill-box"><strong>Backend</strong><br/>Spring Boot, Microservices, Kafka, REST, JWT, JUnit</div>
+        <div class="skill-box"><strong>Databases</strong><br/>MySQL, Oracle SQL, PostgreSQL</div>
+        <div class="skill-box"><strong>DevOps</strong><br/>Jenkins, Docker, Maven, CI/CD</div>
+        <div class="skill-box"><strong>Tools</strong><br/>Git, GitHub, Bitbucket, Jira, IntelliJ, VS Code</div>
+        <div class="skill-box"><strong>Other</strong><br/>JPA, SDLC, Linux, Tomcat</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education & Certification</h2>
+      <p><strong>B.E. — Sinhgad Institute of Technology (SPPU)</strong><br/>CGPA: 8.79 / 10 (2018 – 2022)</p>
+      <p><strong>Microsoft Azure Fundamentals (AZ-900)</strong></p>
+    </section>
+
+    <footer>
+      © 2025 Tejas Badgujar · Backend Engineer
+    </footer>
+  </div>
+
+</body>
+</html>
